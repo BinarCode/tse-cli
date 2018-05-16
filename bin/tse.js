@@ -33,6 +33,21 @@ program
         require('../lib/init')(name, cleanArgs(cmd))
     })
 
+/**
+ * Help.
+ */
+
+program.on('--help', () => {
+    console.log('  Examples:')
+    console.log()
+    console.log(chalk.gray('    # create a new project with an official template'))
+    console.log('    $ tse init my-project')
+    console.log()
+    console.log(chalk.gray('    # create a new project straight from a github template'))
+    console.log('    $ tse init my-project')
+    console.log()
+})
+
 // output help information on unknown commands
 program
     .arguments('<command>')
