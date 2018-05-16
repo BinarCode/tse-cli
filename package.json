@@ -1,5 +1,5 @@
 {
-  "name": "@tse/cli",
+  "name": "tse-cli",
   "version": "1.0.0",
   "description": "Command line interface for rapid TSE.js development",
   "scripts": {
@@ -27,13 +27,16 @@
     "babel-core": "^6.26.3",
     "chalk": "^2.4.1",
     "clear": "^0.1.0",
+    "clui": "^0.3.6",
     "commander": "^2.15.1",
     "debug": "^3.1.0",
     "ejs": "^2.6.1",
+    "figlet": "^1.2.0",
     "fs-extra": "^6.0.1",
     "inquirer": "^5.2.0",
     "lodash": "^4.17.10",
     "minimist": "^1.2.0",
+    "ora": "^2.1.0",
     "semver": "^5.5.0",
     "simple-git": "^1.92.0",
     "touch": "^3.1.0",

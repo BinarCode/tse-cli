@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 const chalk = require('chalk');
+const figlet = require('figlet');
 const program = require('commander');
 const semver = require('semver')
+const clear       = require('clear');
 const requiredVersion = require('../package.json').engines.node
 
 if (!semver.satisfies(process.version, requiredVersion)) {
@@ -11,6 +13,13 @@ if (!semver.satisfies(process.version, requiredVersion)) {
     ))
     process.exit(1)
 }
+
+clear();
+console.log(
+    chalk.yellow(
+        figlet.textSync('TseJS', { horizontalLayout: 'full' })
+    )
+);
 
 program
     .version(require('../package').version)
