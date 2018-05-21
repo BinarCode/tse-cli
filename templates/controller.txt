@@ -1,0 +1,53 @@
+import * as mongoose from 'mongoose';
+import { Controller } from './Controller';
+import { <%= model_name_cap %>Schema } from '../models/<%= model_name_cap %>Schema';
+import { Request, Response } from '../lib/framework/application/http';
+const <%= model_name_cap %> = mongoose.model('<%= model_name_cap %>', <%= model_name_cap %>Schema);
+export class <%= model_name_cap %>Controller extends Controller {
+    public get<%= model_name_cap %>s (req: Request, res: Response) {
+        <%= model_name_cap %>.find({}, (err, entity) => {
+            if (err) {
+                res.send(err);
+            }
+            res.respond(entity);
+        });
+    }
+
+    public store(req: Request, res: Response) {
+        <%= model_name_cap %>.create(req.body, (err, entity) => {
+            if (err) {
+                res.send(err);
+            }
+            res.respond(entity);
+        });
+    }
+
+    public get<%= model_name_cap %>WithID (req: Request, res: Response) {
+        <%= model_name_cap %>.findById(req.params.<%= model_name %>Id, (err, entity) => {
+            if (err) {
+                res.send(err);
+            }
+            res.respond(entity);
+        });
+    }
+
+    public update<%= model_name_cap %> (req: Request, res: Response) {
+        <%= model_name_cap %>.findOneAndUpdate({ _id: req.params.<%= model_name %>Id }, req.body, { new: true }, (err, entity) => {
+            if (err) {
+                res.send(err);
+            }
+            res.respond(entity);
+        });
+    }
+
+    public delete<%= model_name_cap %> (req: Request, res: Response) {
+        <%= model_name_cap %>.remove({ _id: req.params.<%= model_name %>Id }, (err, entity) => {
+            if (err) {
+                res.send(err);
+            }
+            res.respond({ message: 'Successfully deleted <%= model_name_cap %>!'});
+        });
+    }
+}
+
+export default new <%= model_name_cap %>Controller();

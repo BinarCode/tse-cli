@@ -1,0 +1,13 @@
+import <%= model_name %>Controller from '../controllers/<%= model_name_cap %>Controller';
+import {router} from '../lib/Facades';
+router.group({
+    prefix: '<%= model_name %>',
+    middleware: []
+}, router => {
+    router.post('', <%= model_name %>Controller.store);
+    router.get(':<%= model_name %>Id', <%= model_name %>Controller.get<%= model_name_cap %>WithID);
+    router.get('', <%= model_name %>Controller.get<%= model_name_cap %>s);
+    router.post('', <%= model_name %>Controller.store);
+    router.put(':<%= model_name %>Id', <%= model_name %>Controller.update<%= model_name_cap %>);
+    router.delete(':<%= model_name %>Id', <%= model_name %>Controller.delete<%= model_name_cap %>);
+});

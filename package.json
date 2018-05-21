@@ -1,6 +1,6 @@
 {
   "name": "tse-cli",
-  "version": "1.0.0-beta",
+  "version": "1.0.0-beta.1",
   "description": "Command line interface for rapid TSE.js development",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -43,6 +43,7 @@
     "simple-git": "^1.92.0",
     "string.prototype.padstart": "^3.0.0",
     "touch": "^3.1.0",
+    "tse-shared-utils": "^0.0.1-beta.3",
     "validate-npm-package-name": "^3.0.0"
   },
   "engines": {

@@ -33,6 +33,14 @@ program
         require('../lib/init')(name, cleanArgs(cmd))
     })
 
+program
+    .command('make <model-name>')
+    .description(`generate a model with basic field, controller, and CRUD routes`)
+    .option('-c, --controller', 'Generate controller')
+    .action((name, cmd) => {
+        require('../lib/make')(name, cleanArgs(cmd))
+    })
+
 /**
  * Help.
  */

@@ -1,0 +1,10 @@
+import * as mongoose from 'mongoose';
+
+const Schema = mongoose.Schema;
+
+export const <%= model_name_cap %>Schema = new Schema({
+    created_date: {
+        type: Date,
+        default: Date.now
+    }
+});
