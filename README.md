@@ -8,7 +8,7 @@ npm install -g tse-cli
 
 ## Init tse project
 ```sh
-    tse init my-project
+    tse init my-first-tse
 ```
 
 ## Generate a new entity
@@ -102,8 +102,9 @@ export class CoffeController extends Controller {
 }
 
 export default new CoffeController();
-
 ```
+- Go to [postman](https://www.getpostman.com/) and try to run http://127.0.0.1:3000/coffe/
+![picture alt](docs/postman-make.png)
 
 
 ## Stay In Touch
