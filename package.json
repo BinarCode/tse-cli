@@ -1,6 +1,6 @@
 {
   "name": "tse-cli",
-  "version": "1.0.0",
+  "version": "1.0.0-beta",
   "description": "Command line interface for rapid TSE.js development",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
