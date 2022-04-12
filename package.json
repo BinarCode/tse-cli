@@ -40,7 +40,7 @@
     "ora": "^2.1.0",
     "readline": "^1.3.0",
     "semver": "^5.5.0",
-    "simple-git": "^1.92.0",
+    "simple-git": "^3.5.0",
     "string.prototype.padstart": "^3.0.0",
     "touch": "^3.1.0",
     "tse-shared-utils": "^0.0.1-beta.3",
